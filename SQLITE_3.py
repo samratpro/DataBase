@@ -53,10 +53,11 @@ c.execute('''
             ''')
 
 # Data Query
-datas1 = c.execute('''SELECT * FROM Student''')
-datas2 = c.execute('''SELECT Name, Address FROM Student''')
-datas3 = c.execute('''SELECT * FROM Student WHERE Name="Samrat"''')
-datas4 = c.execute('''SELECT * FROM Student WHERE Name="Samrat" AND Student_id=3''')
+datas1 = c.execute('''SELECT * FROM Student''').fetchall()
+datas2 = c.execute('''SELECT Name, Address FROM Student''').fetchall()
+datas3 = c.execute('''SELECT * FROM Student WHERE Name="Samrat"''').fetchall()
+datas4 = c.execute('''SELECT * FROM Student WHERE Name="Samrat" AND Student_id=3''').fetchall()
+single_data = c.execute('''SELECT Name FROM Student WHERE ID=1''').fetchone()[0]
 
 for data in datas1:
     print(data)
