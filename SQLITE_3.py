@@ -13,6 +13,12 @@ c.execute('''
                 Address TEXT
             )
             ''')
+c.execute('''
+            CREATE TABLE IF NOT EXISTS Student(
+                ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                Address TEXT DEFAULT 'Input Your Address'
+            )
+            ''')
 
 
 # Insert Data Into existing table
