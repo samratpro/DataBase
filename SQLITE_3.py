@@ -25,12 +25,15 @@ c.execute('''
 # Try and pass for Unique data
 try:
     c.execute('''
-                    INSERT INTO Student(Name, Student_id, Address)
+                    INSERT INTO Student(
+                                Name,
+                                Student_id,
+                                Address
+                                )
                     VALUES
-                    ('Samrat rg Biswas', 09634, 'Khulna Sa'),
-                    ('Samrhcat ', 764, 'Khulna Sa')
-                    
-                    ''')
+                        ('Samrat rg Biswas', 09634, 'Khulna Sa'),
+                        ('Samrhcat ', 764, 'Khulna Sa')
+             ''')
 except:
     pass
 
