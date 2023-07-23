@@ -37,17 +37,21 @@ except:
 
 # Data Update
 c.execute(''' UPDATE Student
-                SET Name = "Sam"
-                WHERE Name = "Samrat"
+              SET
+                Name = "Sam"
+              WHERE Name = "Samrat"
             ''')
 c.execute(''' UPDATE Student
-                SET Name = "Sam Update",
-                Student_id = 10
-                WHERE Name = "Sam"
+              SET
+                Name = "Sam Update",
+                Student_id = 10,
+                Address = "Khulna"
+              WHERE Name = "Sam"
                 ''')
 c.execute(''' UPDATE Student
-                SET Name = "Samru"
-                WHERE ID == 1
+              SET
+                Name = "Samru"
+              WHERE ID == 1
             ''')
 
 # Dlete DB Data
